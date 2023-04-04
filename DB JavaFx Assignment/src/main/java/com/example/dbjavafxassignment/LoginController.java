@@ -63,7 +63,10 @@ public class LoginController {
           stage.setScene(scene);
       }
         else {
-            System.out.println("Gud");
+            Parent root=FXMLLoader.load(getClass().getResource("Welcome.fxml"));
+            stage =(Stage) ((Node)event.getSource()).getScene().getWindow();
+            scene =new Scene(root);
+            stage.setScene(scene);
         }
     }
 
